@@ -1,0 +1,63 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Nút kiểu 7-Zip */
+.classic-btn {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 1px solid #666;
+  background: #e0e0e0;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.classic-btn:hover {
+  background: #d6d6d6;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 1px solid #ccc;
+  background: white;
+}

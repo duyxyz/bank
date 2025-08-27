@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Ngân hàng</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Chọn Ngân hàng</h1>
+  <div class="container">
+    <button class="classic-btn" onclick="openImage('Agribank.jpg')">Agribank</button>
+    <button class="classic-btn" onclick="openImage('Vietcombank.jpg')">Vietcombank</button>
+  </div>
+
+  <!-- Overlay hiển thị ảnh -->
+  <div id="overlay" class="overlay" onclick="closeOverlay()">
+    <img id="overlay-img" src="" alt="Ảnh ngân hàng">
+  </div>
+
+  <script>
+    function openImage(src) {
+      document.getElementById("overlay-img").src = src;
+      document.getElementById("overlay").style.display = "flex";
+    }
+    function closeOverlay() {
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
+</body>
+</html>
