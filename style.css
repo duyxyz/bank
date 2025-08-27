@@ -1,10 +1,3 @@
-/* Reset nhẹ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   background: #fff;
@@ -13,13 +6,8 @@ body {
   padding: 40px;
 }
 
-h1 {
-  font-size: 20px;
-  margin-bottom: 25px;
-  font-weight: normal;
-}
+h1 { font-size: 20px; margin-bottom: 25px; font-weight: normal; }
 
-/* Container nút */
 .container {
   display: flex;
   justify-content: center;
@@ -27,7 +15,6 @@ h1 {
   flex-wrap: wrap;
 }
 
-/* Nút kiểu classic (giống 7-Zip) */
 .classic-btn {
   padding: 8px 20px;
   font-size: 14px;
@@ -41,13 +28,11 @@ h1 {
   background: #d6d6d6;
 }
 
-/* Overlay (popup ảnh) */
+/* Overlay */
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.8);
   display: none;
   justify-content: center;
