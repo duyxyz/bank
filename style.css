@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset nhẹ */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ h1 {
   font-weight: normal;
 }
 
-/* Container */
+/* Container nút */
 .container {
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-/* Nút kiểu 7-Zip */
+/* Nút kiểu classic (giống 7-Zip) */
 .classic-btn {
   padding: 8px 20px;
   font-size: 14px;
@@ -41,7 +41,7 @@ h1 {
   background: #d6d6d6;
 }
 
-/* Overlay */
+/* Overlay (popup ảnh) */
 .overlay {
   position: fixed;
   top: 0;
