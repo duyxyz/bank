@@ -1,77 +1,79 @@
-:root { --fg:#fff; --fg-dim:#ccc; --bg:#000; }
+:root {
+  --fg: #fff;
+  --bg: #000;
+}
 
 body {
-  margin: 0; padding: 0;
-  font-family: 'Inter','Segoe UI',Tahoma,sans-serif;
-  color: var(--fg); background: var(--bg);
-  text-align: center; overflow-x: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  text-align: center;
   min-height: 100vh;
 }
 
-#space-bg { position: fixed; inset: 0; z-index: -1; display:block; }
+#space-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;   /* nền nằm sau cùng */
+  display: block;
+}
 
-.container { 
-  max-width: 600px; 
-  padding: 28px; 
+.container {
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 
-/* Bank buttons */
+/* Tiêu đề */
+h1 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+/* Nút ngân hàng */
 .bank-buttons {
-  display:flex;
-  flex-direction: column; /* 🔥 dọc */
-  gap: 22px;              /* khoảng cách giữa nút */
-  width:100%;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
 }
 
 .classic-btn {
-  background:rgba(255,255,255,.05);
-  border:1.5px solid rgba(255,255,255,.3);
-  color:var(--fg);
-  padding:20px 30px;      /* 🔥 tăng padding */
-  border-radius:25px;
-  cursor:pointer;
-  font-size:1.5rem;       /* 🔥 chữ to hơn */
-  backdrop-filter: blur(6px);
-  transition:all .25s ease-in-out;
-  width: 90%;             /* 🔥 nút rộng hơn */
-  max-width: 400px;       /* 🔥 nút lớn hơn */
+  background: rgba(255,255,255,.05);
+  border: 1.5px solid rgba(255,255,255,.3);
+  color: var(--fg);
+  font-size: 1.1rem;
+  padding: 14px 16px;
+  border-radius: 18px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  transition: all .25s ease-in-out;
 }
-.classic-btn:hover { background:rgba(255,255,255,.15); transform: translateY(-3px); }
+.classic-btn:hover {
+  background: rgba(255,255,255,.15);
+}
 
 /* Overlay */
 .overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0,0,0,0.9);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .overlay img {
-  max-width: 90%;
-  max-height: 90%;
-  border: 2px solid var(--fg);
-  background: #000;
-  border-radius: 12px;
-}
-
-#datetime{ font-size:1.2rem;color:var(--fg-dim); margin-top: 10px; }
-
-@media (max-width:600px){
-  .classic-btn {
-    font-size:1.2rem;
-    padding:16px 24px;
-    max-width: 90%;
-  }
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
 }

@@ -41,16 +41,19 @@ function closeOverlay() {
 
 loadImagesFromGitHub();
 
-// Canvas background (stars + meteors)
+
+// ⭐ Background: sao + sao băng
 const canvas = document.getElementById('space-bg');
 const ctx = canvas.getContext('2d');
 let stars = [], meteors = [];
+
 function resizeCanvas(){
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  createStars(Math.min(300, Math.floor(canvas.width * canvas.height / 5000)));
+  createStars(Math.min(200, Math.floor(canvas.width * canvas.height / 6000)));
 }
 window.addEventListener('resize', resizeCanvas);
+
 function createStars(count){
   stars.length = 0;
   for(let i=0;i<count;i++){
@@ -63,6 +66,7 @@ function createStars(count){
     });
   }
 }
+
 function spawnMeteor(){
   const side = Math.random() < 0.5 ? 'left' : 'right';
   const y = Math.random() * canvas.height * 0.5;
@@ -77,7 +81,8 @@ function spawnMeteor(){
     alpha: 1
   });
 }
-setInterval(spawnMeteor, 1500);
+setInterval(spawnMeteor, 2000); // thưa hơn trên mobile
+
 function draw(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
   for(const s of stars){
@@ -104,15 +109,6 @@ function draw(){
   meteors = meteors.filter(m => m.alpha > 0.05);
   requestAnimationFrame(draw);
 }
+
 resizeCanvas();
 draw();
-
-// Update date & time
-function updateDateTime(){
-  const now = new Date();
-  const daysVN = ["Chủ nhật","Thứ 2","Thứ 3","Thứ 4","Thứ 5","Thứ 6","Thứ 7"];
-  document.getElementById("datetime").textContent =
-    `${daysVN[now.getDay()]}, ${now.toLocaleDateString("vi-VN")} - ${now.toLocaleTimeString("vi-VN")}`;
-}
-setInterval(updateDateTime, 1000);
-updateDateTime();

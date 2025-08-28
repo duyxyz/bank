@@ -2,7 +2,8 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Ngân hàng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ngân hàng (Mobile)</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,19 +11,14 @@
   <canvas id="space-bg"></canvas>
 
   <div class="container">
-    <!-- Bỏ header avatar + tên -->
-
-    <!-- Nút ngân hàng -->
+    <h1>Danh sách ngân hàng</h1>
+    <!-- Nút load từ GitHub -->
     <div class="bank-buttons" id="button-container">Đang tải ảnh...</div>
+  </div>
 
-    <!-- Overlay hiển thị ảnh -->
-    <div id="overlay" class="overlay" onclick="closeOverlay()">
-      <img id="overlay-img" src="" alt="Ảnh ngân hàng">
-    </div>
-
-    <!-- Bỏ footer buttons -->
-
-    <div id="datetime"></div>
+  <!-- Overlay hiển thị ảnh -->
+  <div id="overlay" class="overlay" onclick="closeOverlay()">
+    <img id="overlay-img" src="" alt="Ảnh ngân hàng">
   </div>
 
   <script src="script.js"></script>
