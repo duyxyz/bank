@@ -6,12 +6,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Chọn Ngân hàng</h1>
-  <div class="container" id="button-container">Đang tải ảnh...</div>
+  <!-- Nền vũ trụ -->
+  <canvas id="space-bg"></canvas>
 
-  <!-- Overlay hiển thị ảnh -->
-  <div id="overlay" class="overlay" onclick="closeOverlay()">
-    <img id="overlay-img" src="" alt="Ảnh ngân hàng">
+  <div class="container">
+    <!-- Bỏ header avatar + tên -->
+
+    <!-- Nút ngân hàng -->
+    <div class="bank-buttons" id="button-container">Đang tải ảnh...</div>
+
+    <!-- Overlay hiển thị ảnh -->
+    <div id="overlay" class="overlay" onclick="closeOverlay()">
+      <img id="overlay-img" src="" alt="Ảnh ngân hàng">
+    </div>
+
+    <!-- Bỏ footer buttons -->
+
+    <div id="datetime"></div>
   </div>
 
   <script src="script.js"></script>

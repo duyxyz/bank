@@ -1,48 +1,77 @@
+:root { --fg:#fff; --fg-dim:#ccc; --bg:#000; }
+
 body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #fff;
-  color: #000;
-  text-align: center;
-  padding: 40px;
-}
+  margin: 0; padding: 0;
+  font-family: 'Inter','Segoe UI',Tahoma,sans-serif;
+  color: var(--fg); background: var(--bg);
+  text-align: center; overflow-x: hidden;
 
-h1 { font-size: 20px; margin-bottom: 25px; font-weight: normal; }
-
-.container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#space-bg { position: fixed; inset: 0; z-index: -1; display:block; }
+
+.container { 
+  max-width: 600px; 
+  padding: 28px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Bank buttons */
+.bank-buttons {
+  display:flex;
+  flex-direction: column; /* 🔥 dọc */
+  gap: 22px;              /* khoảng cách giữa nút */
+  width:100%;
+  align-items: center;
 }
 
 .classic-btn {
-  padding: 8px 20px;
-  font-size: 14px;
-  border: 1px solid #666;
-  background: #e0e0e0;
-  cursor: pointer;
-  min-width: 120px;
+  background:rgba(255,255,255,.05);
+  border:1.5px solid rgba(255,255,255,.3);
+  color:var(--fg);
+  padding:20px 30px;      /* 🔥 tăng padding */
+  border-radius:25px;
+  cursor:pointer;
+  font-size:1.5rem;       /* 🔥 chữ to hơn */
+  backdrop-filter: blur(6px);
+  transition:all .25s ease-in-out;
+  width: 90%;             /* 🔥 nút rộng hơn */
+  max-width: 400px;       /* 🔥 nút lớn hơn */
 }
-
-.classic-btn:hover {
-  background: #d6d6d6;
-}
+.classic-btn:hover { background:rgba(255,255,255,.15); transform: translateY(-3px); }
 
 /* Overlay */
 .overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
-
 .overlay img {
   max-width: 90%;
   max-height: 90%;
-  border: 1px solid #ccc;
-  background: white;
+  border: 2px solid var(--fg);
+  background: #000;
+  border-radius: 12px;
+}
+
+#datetime{ font-size:1.2rem;color:var(--fg-dim); margin-top: 10px; }
+
+@media (max-width:600px){
+  .classic-btn {
+    font-size:1.2rem;
+    padding:16px 24px;
+    max-width: 90%;
+  }
 }
